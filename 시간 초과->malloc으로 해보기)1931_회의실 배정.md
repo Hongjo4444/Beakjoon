@@ -9,7 +9,12 @@
     {
         int N;
         scanf("%d",&N);
-        int data[100001][2];
+        int**data = (int**)malloc(sizeof(int*)*N);
+        for(int i=0; i<N; i++)
+        { 
+            data[i] = (int*)malloc(sizeof(int)*2);
+        }
+        // int data[100001][2];
         for(int i=0;i<N;i++) scanf("%d %d",&data[i][0],&data[i][1]);
 
         for(int i=0;i<N;i++)
